@@ -8,8 +8,7 @@ function salvarUsuario(){
   const telefone = document.getElementById("telefone").value;
   const email = document.getElementById("email").value;
   const endereco = document.getElementById("endereco").value;
-  const status = document.getElementById("status").value;
-  const usuario = {id: Date.now(), nome, senha, telefone, email, endereco, status};
+  const usuario = {id: Date.now(), nome, senha, telefone, email, endereco};
 
   //criar projeto no localstorage
   let usuarios = JSON.parse(window.localStorage.getItem("usuarios"));
