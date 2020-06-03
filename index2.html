@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/index.js"></script>
+
+  <title>Trabalhando com Objetos - JavaScript</title>
+</head>
+<body>
+  <div class="row">
+   
+    <div class="col-md-4 col-xs-4">
+      <h2>Cadastro de Produtos</h2>
+      
+        <div class="form-group">
+           <label for="">Nome</label>
+           <input type="text" class="form-control" id="nome">
+        </div>
+        <div class="form-group">
+           <label for="">Descrição</label>
+           <input type="text" class="form-control" id="descricao">
+        </div>
+        <div class="form-group">
+           <label for="">Quantidade</label>
+           <input type="text" class="form-control" id="quantidade">
+        </div>
+        <div class="form-group">
+           <label for="">Preço</label>
+           <input type="email" class="form-control" id="preco">
+        </div>
+        <div>
+          <button class="btn btn-outline-success" type="button" onclick="salvarUsuario()">Salvar</button>
+        </div>
+      
+    </div>
+    <div class="col-md-8 col-xs-8">
+      <h2>Lista de Usuários</h2>
+      <table class="table">
+        <thead>
+          <tr>
+             <th>ID</th>  
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+           
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</body>
+</html>
