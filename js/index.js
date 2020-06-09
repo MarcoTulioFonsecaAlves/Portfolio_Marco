@@ -3,21 +3,20 @@ const usuarios = [];
 function salvarUsuario(){
   const nome = document.getElementById("nome").value;
   const descricao = document.getElementById("descricao").value;
-  const quantidade = document.getElementById("quantidade").value;
-  const preco = document.getElementById("preco").value;
+  const tipo = document.getElementById("tipo").value;
+  const categoria = document.getElementById("categoria").value;
   
   let id = usuarios.length;
 
-  const usuario = {id: id++,nome, descricao, quantidade, preco};
-  window.localStorage.setItem('usuarios', JSON.stringify([]));
-  let usuarios = JSON.parse(window.localStorage.getItem("usuarios"));
+  const usuario = {id: id++,
+     nome, descricao, tipo, categoria};
   usuarios.push(usuario);
-  window.localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
+ 
+  
   Swal.fire({
     
     icon: 'success',
-    title: 'Usuário cadastrado com sucesso!',
+    title: 'Produto cadastrado com sucesso!!!',
     showConfirmButton: false,
     timer: 1500
   });
@@ -37,7 +36,7 @@ function logar(){
     Swal.fire({
     
       icon: 'warning',
-      title: 'Email não cadastrado!',
+      title: 'EMAIL não cadastrado!',
       showConfirmButton: false,
       timer: 1500
     });
@@ -59,6 +58,7 @@ function logar(){
         showConfirmButton: false,
         timer: 1500
       });
+
     } else {
 
       const Toast = Swal.mixin({
@@ -75,6 +75,7 @@ function logar(){
       
       Toast.fire({
         icon: 'success',
+        timer: 1500,
         title: `Bem Vindo ${usuariosGravados[usuarioIndex].nome}`
       })
       window.location.href="menu.html";
@@ -137,8 +138,8 @@ function listarUsuarios(){
               "<td id='tdid'>"+usuario.id +"</td>"+
               "<td id='tdnome'>"+usuario.nome +"</td>"+
               "<td id='tddescricao'>"+usuario.descricao+"</td>"+
-              "<td id='tdquantidade'>"+usuario.quantidade+"</td>"+
-              "<td id='tdpreco'>"+usuario.preco+"</td>"+
+              "<td id='tdtipo'>"+usuario.tipo+"</td>"+
+              "<td id='tdcategoria'>"+usuario.categoria+"</td>"+
               "<td id='tdacoes'><button class='btn btn-outline-success' onclick='editarUsuario("+usuario.id+")'><i class='fa fa-edit'></i></button>"+
               "<button class='btn btn-outline-danger'onclick='apagarUsuario("+usuario.id+")'><i class='fa fa-trash'></i></button></td>"
             +"</tr>";
