@@ -68,3 +68,15 @@
   .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #3db33b !important;
   }
+
+  .painel{
+    padding-top: 30px;
+  }
+
+  .container{
+    padding-top: 30px;
+  }
+
+  .btn-outline-success{
+    margin-top: 30px;
+  }

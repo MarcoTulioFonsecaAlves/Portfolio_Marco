@@ -21,7 +21,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Framework</a>
+    <a class="navbar-brand" href="#">Controle Financeiro</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,6 +29,12 @@
       <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="menu.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contas.html">Contas <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="categorias.html">Categorias <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,5 +57,94 @@
     </div>
   </nav>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header" align="center">
+            <h1>Receitas</h1>
+          </div>
+          <div class="card-body card-totais">
+            <h1 id="receitas">0</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header" align="center">
+            <h1>Despesas</h1>
+          </div>
+          <div class="card-body card-totais">
+            <h1 id="despesas">0</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header" align="center">
+            <h1>Saldo</h1>
+          </div>
+          <div class="card-body card-totais">
+            <h1 id="saldo">0</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row painel">
+      <div class="col-md-4 col-xs-4">
+        <div class="card">
+          <div class="card-header" align="center">
+            <h2>Lançar Movimentação</h2>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="">Conta</label>
+              <select id="conta" class="form-control">
+
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="">Descrição</label>
+              <input type="text" class="form-control" id="descricao" >
+            </div>
+            <div class="form-group">
+              <label for="">Valor</label>
+              <input type="text" class="form-control" id="valor" >
+            </div>
+            <div class="form-group">
+              <label for="">Data</label>
+              <input type="date" class="form-control" id="data" >
+            </div>
+            <div class="form-group">
+              <label for="">Hora</label>
+              <input type="time" class="form-control" id="hora" >
+              <div>
+                <button id="botao" class="btn btn-outline-success" type="button" onclick="salvarlancamentos()">Salvar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <div class="col-md-8 col-xs-8">
+            <table class="table table-dark">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Conta</th>
+                  <th>Valor</th>
+                  <th>Data</th>
+                  <th>Hora</th>
+                  <th>Descrição</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+           
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-3">
+          </div>
+    </div>
+    </div>
 </body>
 </html>
