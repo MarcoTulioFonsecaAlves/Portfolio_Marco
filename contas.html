@@ -57,14 +57,14 @@
     </div>
   </nav>
 
-  <div class="col-12">
-    <div style="text-align: center; margin-top: 150px;">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
+            <div class="container">
+            <div class="row painel">
+                <div class="col-md-4">
                 <div class="card">
-                <div class="card-body">
-                    <h2>Cadastro de Contas</h2>
+                    <div class="card-header" align="center">
+                    <h2>Contas</h2>
+                    </div>
+                    <div class="card-body">
                    <div class="form-group" hidden>
                         <label for="">Id</label>
                         <input type="text" class="form-control" id="id">
@@ -93,31 +93,29 @@
                 </div>
                 </div>
             </div>
-            <div class="col-4"></div>
+        <div class="row">
+            <div class="col-md-8 col-xs-8">
+            <table class="table table-dark">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Descrição</th>
+                  <th>Tipo</th>
+                  <th>Categoria</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+                <tr>
+                  
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
         </div>
     </div>
+</div>
 </div> 
-
-<br>
-<div class="row">
-  <div class="col-2"></div>
-  <div class="col-8">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Descrição</th>
-          <th>Tipo</th>
-          <th>Categoria</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="tbody">
-        <tr>
-          
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </body>
 </html>
